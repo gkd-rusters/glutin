@@ -21,7 +21,8 @@ default = ["x11", "wayland"]
 
 [dependencies]
 lazy_static = "1.3"
-winit = { version = "0.24.0", default-features = false }
+# winit = { version = "0.24.0", default-features = false }
+winit = {git = "https://github.com/gkd-rusters/winit.git", branch = "gkd", package = "winit", default-features = false }
 
 [target.'cfg(target_os = "android")'.dependencies]
 android_glue = "0.2"
@@ -37,8 +38,8 @@ glutin_gles2_sys = { version = "0.1.4", path = "../glutin_gles2_sys" }
 
 [target.'cfg(target_os = "macos")'.dependencies]
 cgl = "0.3"
-cocoa = "0.23"
-core-foundation = "0.9"
+cocoa = {git = "https://github.com/gkd-rusters/core-foundation-rs.git", branch = "gkd", package = "cocoa"}
+core-foundation = {git = "https://github.com/gkd-rusters/core-foundation-rs.git", branch = "gkd", package = "core-foundation"}
 
 [target.'cfg(target_os = "windows")'.dependencies.winapi]
 version = "0.3"

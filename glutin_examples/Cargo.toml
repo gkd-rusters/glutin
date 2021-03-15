@@ -12,7 +12,9 @@ publish = false
 
 [dependencies]
 glutin = { path = "../glutin" }
-winit = "0.24.0"
+# winit = "0.24.0"
+winit = {git = "https://github.com/gkd-rusters/winit.git", branch = "gkd", package = "winit"}
+
 takeable-option = "0.4"
 image = "0.21"
 
